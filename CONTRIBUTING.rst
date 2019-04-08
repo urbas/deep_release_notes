@@ -35,13 +35,6 @@ Implement Features
 Look through the GitHub issues for features. Anything tagged with "enhancement"
 and "help wanted" is open to whoever wants to implement it.
 
-Write Documentation
-~~~~~~~~~~~~~~~~~~~
-
-Deep release notes could always use more documentation, whether as part of the
-official Deep release notes docs, in docstrings, or even on the web in blog posts,
-articles, and such.
-
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
@@ -93,41 +86,12 @@ Ready to contribute? Here's how to set up `deep_release_notes` for local develop
 
 7. Submit a pull request through the GitHub website.
 
-Pull Request Guidelines
------------------------
-
-Before you submit a pull request, check that it meets these guidelines:
-
-1. The pull request should include tests.
-2. If the pull request adds functionality, the docs should be updated. Put
-   your new functionality into a function with a docstring, and add the
-   feature to the list in README.rst.
-3. The pull request should work for Python 2.7, 3.4, 3.5 and 3.6, and for PyPy. Check
-   https://travis-ci.org/urbas/deep_release_notes/pull_requests
-   and make sure that the tests pass for all supported Python versions.
-
 Tips
 ----
 
 To run a subset of tests::
 
 $ py.test tests.test_deep_release_notes
-
-
-Repeatable development environment
-----------------------------------
-
-You can start a repeatable development environment with docker. Simply invoke this::
-
-$ docker build -t deep_release_notes --build-arg=PYTHON_VERSION=$(< .python-version) .
-
-Now you can search for release notes on GitHub::
-
-$ docker run -v "/tmp/deep_release_notes_data:/data" -v "$HOME/.github:/github_conf" -it deep_release_notes -v find-all --size=10000
-
-And then clone repositories that contain release notes::
-
-$ docker run -v "/tmp/deep_release_notes_data:/data" -it deep_release_notes -v clone-found-repos
 
 
 Deploying
