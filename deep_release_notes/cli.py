@@ -48,7 +48,7 @@ def clone_found_repos(search_dir, clone_dir):
                 env={"GIT_TERMINAL_PROMPT": "0"},
             )
             logging.info("Repo %s cloned into %s.", repo, repo_path)
-        except CalledProcessError as _:
+        except CalledProcessError:
             logging.exception("Could not clone repo %s.", repo)
 
 
